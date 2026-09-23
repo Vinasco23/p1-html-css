@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Hallo,Hi</h1>
+        <p>Internet + bellen van Hallo Hi</p>
+        <p>Kies uit sim only of een telefoon met abonnement <br>
+        van HalloHi en ontvang tijdelijk €145 voordeel.</p>
+    
+        <button>Bekijk deal</button>
+        <button>Ontdek meer</button>
+        
+    </header>
+    <main>
+    <!--this is the filling stuff not really important stuff-->
+    <section>
+        <form action="">
+            <p>Voornaam</p>
+            <input type="text" pattern="[A-Za-z\s]+" required>
+            <p>Achternaam</p>
+            <input type="text" pattern="[A-Za-z\s]+" required>
+            <!---------------------------------------------------------->
+            <p>Aanhef</p>
+            <input type="radio" name="Aanhef">Dhr.
+            <input type="radio" name="Aanhef">Mevr.
+            <input type="radio" name="Aanhef">Anders
+            <!---------------------------------------------------------->
+            <p>Straat met huisnummer</p>
+            <input type="text" pattern="[0-9a-zA-Z\s]+" required>
+            <p>Postcode</p>
+            <input type="text" pattern="[0-9a-zA-Z\s]+" maxlength="7" required>
+            <p>IBAN-nummer</p>
+            <input type="text" pattern="[0-9a-zA-Z\s]+" maxlength="18" required>
+            <!---------------------------------------------------------->
+            <p>Type abonnement</p>
+            <input type="radio" name="abonnement">Mobiel
+            <input type="radio" name="abonnement">Glasvezel
+            <input type="radio" name="abonnement">TV
+            <!---------------------------------------------------------->
+            <p>Datum van ingang abonnement</p>
+            <input type="date" pattern="[0-9]" min="2026-09-21" required>
+            <p>Looptijd abonnement</p>
+            <input type="text" pattern="[0-9a-zA-Z\s]+" required>
+            <!---------------------------------------------------------->
+            <p>Aantal gebruikers op het abonnement</p>
+            <input type="radio" name="gebruikers">een
+            <input type="radio" name="gebruikers">twee
+            <input type="radio" name="gebruikers">drie
+            <input type="radio" name="gebruikers">vier
+            <!---------------------------------------------------------->
+            <P>E-mailadress</P>
+            <input type="text" pattern="[0-9a-zA-Z-@\s]+" required>
+            <P>Wachtwoord aanmaken</P>
+            <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" minlength="8" maxlength="20" required>
+            <!---------------------------------------------------------->
+            <br>
+            <button type="submit">Versturen</button>
+        </form>
+    </section>
+    </main>
+</body>
+</html>
