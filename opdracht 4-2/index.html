@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Watch Series 11</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: #f5f5f5;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+
+        /* Paarse navigatie */
+        nav {
+            height: 38px;
+            background-color: #7657df;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        /* Pagina */
+        main {
+            width: 1400px;
+            max-width: 90%;
+            margin: auto;
+            padding-top: 65px;
+        }
+
+        h1 {
+            margin: 0;
+            text-align: center;
+            font-size: 48px;
+            font-weight: normal;
+        }
+
+        /* Gebied met tekst + Apple Watch */
+        .product {
+            position: relative;
+            margin-top: 80px;
+            min-height: 560px;
+        }
+
+        /* Witte informatieblok */
+        .product-info {
+            position: absolute;
+            left: 0;
+            top: 140px;
+
+            width: 615px;
+            min-height: 385px;
+
+            padding: 55px 32px 32px;
+
+            background-color: white;
+
+            /* Alleen onderkant afgerond */
+            border-radius: 0 0 160px 0;
+        }
+
+        .product-info h2 {
+            margin: 0 0 25px;
+            font-size: 29px;
+            font-weight: normal;
+        }
+
+        .product-info p {
+            font-size: 14px;
+            line-height: 1.55;
+        }
+
+        .product-info ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+
+            font-size: 14px;
+            line-height: 1.55;
+        }
+
+        .product-info li::before {
+            content: "+ ";
+        }
+
+        /* NIEUW rondje */
+        .badge {
+            position: absolute;
+            top: -85px;
+            right: -40px;
+
+            width: 145px;
+            height: 145px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: black;
+            color: white;
+
+            border: 7px solid #6859ff;
+            border-radius: 50%;
+
+            text-align: center;
+            font-size: 20px;
+            line-height: 1.2;
+
+            transform: rotate(-10deg);
+        }
+
+        /* Knop */
+        .button {
+            display: inline-block;
+
+            padding: 12px 22px;
+
+            background-color: black;
+            color: white;
+
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+
+        /* APPLE WATCH AFBEELDING */
+        .watch {
+            position: absolute;
+
+            width: 520px;
+            height: auto;
+
+            top: 0;
+            right: 70px;
+
+            z-index: 2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#">Internet + Bellen</a>
+        <a href="#">Mobiel</a>
+        <a href="#">Entertainment</a>
+        <a href="#">Service</a>
+    </nav>
+
+    <main>
+
+        <h1>Better by every measure</h1>
+
+        <div class="product">
+
+            <!-- APPLE WATCH AFBEELDING -->
+            <img class="watch" src="img/watch.png" alt="Apple Watch">
+
+            <section class="product-info">
+
+                <div class="badge">
+                    NIEUW<br>
+                    bij<br>
+                    Hallo Hi
+                </div>
+
+                <h2>Apple Watch Series 11</h2>
+
+                <p>
+                    Apple heeft de nieuwe Apple Watch Series 11 onthuld!<br>
+                    Deze elfde generatie van de Apple Watch is beschikbaar
+                    in twee formaten: 42 mm en 46 mm.<br>
+                    Het horloge zit boordevol nieuwe mogelijkheden. Zo gaat
+                    de batterij langer mee en is dit de eerste Apple Watch
+                    die je bloeddruk kan meten.
+                </p>
+
+                <ul>
+                    <li>Bloeddrukmeter</li>
+                    <li>Krachtig Ion-X-glas</li>
+                    <li>Batterijduur tot 24 uur</li>
+                    <li>Verdubbelde krasbestendigheid</li>
+                </ul>
+
+                <a href="#" class="button">
+                    Ontdek de Apple Watch
+                </a>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
