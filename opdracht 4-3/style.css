@@ -1,0 +1,444 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    background-color: white;
+    color: #111;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   Header en navigatie
+========================= */
+
+header {
+    background: linear-gradient(90deg, #686bdc, #755ee0);
+}
+
+.navbar {
+    max-width: 1100px;
+    min-height: 70px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 45px;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+    gap: 55px;
+
+    color: white;
+}
+
+.nav-links > li {
+    position: relative;
+}
+
+.nav-links > li > a {
+    display: block;
+    padding: 25px 0;
+}
+
+
+/* =========================
+   Dropdown Service
+========================= */
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: -20px;
+
+    width: 190px;
+    padding: 15px 20px;
+
+    list-style: none;
+
+    background: linear-gradient(
+        180deg,
+        #695fe1,
+        #676edc
+    );
+
+    border-radius: 0 0 35px 0;
+
+    display: none;
+
+    z-index: 10;
+}
+
+.service:hover .dropdown {
+    display: block;
+}
+
+.dropdown li {
+    margin: 8px 0;
+}
+
+.dropdown a {
+    color: white;
+    font-size: 14px;
+}
+
+
+/* =========================
+   Hero
+========================= */
+
+.hero {
+    max-width: 1100px;
+    min-height: 430px;
+    margin: auto;
+
+    background-color: #000;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 55px 90px;
+
+    overflow: hidden;
+}
+
+.hero-text {
+    width: 52%;
+}
+
+.kleuren {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.kleuren span {
+    width: 20px;
+    height: 5px;
+    background-color: #9000ff;
+}
+
+.kleuren span:nth-child(2) {
+    background-color: #6369dd;
+}
+
+.kleuren span:nth-child(3) {
+    background-color: white;
+}
+
+.hero h1 {
+    font-size: 64px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    color: #00e0c0;
+    font-size: 25px;
+
+    border: 3px solid #00e0c0;
+    border-radius: 50%;
+}
+
+.hero h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.hero p {
+    max-width: 450px;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    margin-top: 35px;
+}
+
+
+/* =========================
+   Knoppen
+========================= */
+
+.button {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    border-radius: 6px;
+
+    transition: 0.2s;
+}
+
+.button:hover {
+    transform: translateY(-2px);
+}
+
+.button-zwart {
+    color: white;
+    background-color: black;
+    border: 1px solid white;
+}
+
+.button-paars {
+    background-color: #9000ff;
+    color: white;
+}
+
+
+/* =========================
+   Hero afbeelding
+========================= */
+
+.hero-image {
+    width: 40%;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image img {
+    max-width: 280px;
+    max-height: 330px;
+    object-fit: contain;
+}
+
+.deal {
+    position: absolute;
+    left: 0;
+    top: 90px;
+
+    width: 85px;
+    height: 85px;
+
+    background-color: #9000ff;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-weight: bold;
+
+    transform: rotate(-10deg);
+
+    z-index: 2;
+}
+
+
+/* =========================
+   Tweede sectie
+========================= */
+
+.mobiel-tv {
+    max-width: 1100px;
+    min-height: 500px;
+    margin: auto;
+
+    background-color: #f5f7fa;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 70px 90px;
+}
+
+.mobiel-content {
+    width: 55%;
+}
+
+.mobiel-content h2 {
+    font-size: 38px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+
+.mobiel-content p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 22px;
+}
+
+.voordelen {
+    list-style: none;
+    margin: 25px 0 35px;
+}
+
+.voordelen li {
+    margin: 7px 0;
+}
+
+.voordelen li::before {
+    content: "+";
+    margin-right: 8px;
+}
+
+.button-mobiel {
+    background-color: #000;
+    color: white;
+}
+
+.mobiel-afbeelding {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+}
+
+.mobiel-afbeelding img {
+    width: 100%;
+    max-width: 310px;
+    height: 340px;
+
+    object-fit: cover;
+
+    border: 12px solid #9000ff;
+    border-radius: 30px;
+
+    box-shadow: 12px 12px 0 #777de3;
+}
+
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    max-width: 1100px;
+    margin: auto;
+
+    background: linear-gradient(
+        90deg,
+        #8c00ff,
+        #732bea
+    );
+
+    color: white;
+}
+
+.footer-content {
+    min-height: 110px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 25px 90px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 35px;
+}
+
+.footer-links a {
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.stores {
+    display: flex;
+    gap: 15px;
+}
+
+.store-button {
+    border: 2px solid white;
+    border-radius: 6px;
+
+    padding: 10px 16px;
+
+    color: white;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 50px 30px;
+    }
+
+    .hero-text,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image {
+        margin-top: 40px;
+    }
+
+    .mobiel-tv {
+        flex-direction: column;
+        padding: 50px 30px;
+    }
+
+    .mobiel-content,
+    .mobiel-afbeelding {
+        width: 100%;
+    }
+
+    .mobiel-afbeelding {
+        margin-top: 50px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 25px;
+        padding: 30px;
+    }
+}
