@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.stage {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+
+    background: black;
+    color: white;
+
+    font-family: Arial, sans-serif;
+}
+
+.bannerSize {
+    width: 300px;
+    height: 600px;
+}
+
+/* Streepjes */
+.streepjes {
+    position: absolute;
+
+    top: 25px;
+    left: 25px;
+
+    display: flex;
+    gap: 5px;
+}
+
+.streepjes span:first-child {
+    width: 24px;
+    height: 4px;
+
+    background: #6f4cff;
+}
+
+.streepjes span:last-child {
+    width: 13px;
+    height: 4px;
+
+    background: white;
+}
+
+/* Tekst */
+.tekst {
+    position: absolute;
+
+    top: 55px;
+    left: 25px;
+
+    z-index: 5;
+
+    animation: tekstBinnen 0.8s ease-out;
+}
+
+.titel {
+    display: flex;
+    align-items: flex-start;
+}
+
+h1 {
+    margin: 0;
+
+    font-family: Georgia, serif;
+    font-size: 50px;
+    font-weight: normal;
+
+    line-height: 1;
+}
+
+.hi {
+    width: 43px;
+    height: 43px;
+
+    margin-left: 7px;
+    margin-top: -8px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid #00e0ad;
+    border-radius: 50%;
+
+    color: #00e0ad;
+
+    font-family: Georgia, serif;
+    font-size: 18px;
+}
+
+.tekst h2 {
+    margin: 5px 0 0;
+
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.subtitel {
+    margin: 4px 0 0;
+
+    font-family: Georgia, serif;
+    font-size: 11px;
+}
+
+/* Voordelen */
+.voordelen {
+    list-style: none;
+
+    margin-top: 45px;
+    padding: 0;
+
+    font-family: Georgia, serif;
+
+    font-size: 14px;
+    line-height: 23px;
+}
+
+/* Simkaart */
+.simkaart {
+    position: absolute;
+
+    width: 145px;
+    height: auto;
+
+    left: 77px;
+    top: 300px;
+
+    z-index: 5;
+
+    animation: simBinnen 1s ease-out;
+}
+
+/* SUPERDEAL */
+.sticker {
+    position: absolute;
+
+    width: 85px;
+    height: 85px;
+
+    right: 15px;
+    top: 215px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #00e0ad;
+    color: black;
+
+    border-radius: 50%;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    z-index: 10;
+
+    transform: rotate(-8deg);
+}
+
+/* Paarse vorm */
+.paars {
+    position: absolute;
+
+    width: 420px;
+    height: 250px;
+
+    left: -60px;
+    bottom: -105px;
+
+    background: #706be7;
+
+    border-radius: 50% 50% 0 0;
+
+    z-index: 2;
+}
+
+/* Button */
+button {
+    position: absolute;
+
+    width: 170px;
+    height: 48px;
+
+    left: 125px;
+    top: 65px;
+
+    background: transparent;
+    color: white;
+
+    border: 1px solid white;
+    border-radius: 6px;
+
+    font-family: Georgia, serif;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: transform 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+/* Animaties */
+@keyframes tekstBinnen {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes simBinnen {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
