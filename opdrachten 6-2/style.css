@@ -1,0 +1,54 @@
+
+/* Algemene instellingen */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Flexbox-container */
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+/* De vierkante blokken */
+.blok {
+    width: 125px;
+    height: 125px;
+}
+
+.blauw {
+    background-color: blue;
+}
+
+.zwart {
+    background-color: black;
+}
+
+.rood {
+    background-color: red;
+}
+
+.groen {
+    background-color: green;
+}
+
+/* Bonus: volgorde veranderen met alleen CSS */
+.bonus .blauw {
+    order: 4;
+}
+
+.bonus .zwart {
+    order: 3;
+}
+
+.bonus .rood {
+    order: 2;
+}
+
+.bonus .groen {
+    order: 1;
+}
