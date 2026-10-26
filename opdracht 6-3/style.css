@@ -1,0 +1,77 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 40px;
+}
+
+.logo {
+    color: darkblue;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    text-decoration: none;
+    width: 25%;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.nav-links a,
+.login {
+    color: darkblue;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.login {
+    width: 25%;
+    text-align: right;
+}
+
+.nav-links a:hover,
+.login:hover {
+    color: dodgerblue;
+    text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 700px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .logo {
+        width: auto;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .login {
+        width: auto;
+        margin-left: auto;
+    }
+}

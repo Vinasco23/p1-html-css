@@ -1,0 +1,74 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Horizontaal hoofdmenu */
+.navbar {
+    background-color: #333;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: #555;
+}
+
+/* Dropdown-menu */
+.submenu {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    background-color: #333;
+    z-index: 10;
+}
+
+/* Submenu tonen bij hover */
+.dropdown:hover .submenu {
+    display: flex;
+}
+
+/* Submenu-items */
+.submenu li {
+    width: 100%;
+}
+
+.submenu a {
+    padding: 12px 20px;
+}
+
+/* Mobiele weergave */
+@media (max-width: 600px) {
+    .menu {
+        flex-wrap: wrap;
+    }
+
+    .submenu {
+        position: static;
+        width: 100%;
+    }
+}
