@@ -1,1 +1,226 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+    background-color: #000;
+    color: white;
+}
+
+/* Navigatiebalk */
+.navbar {
+    background-color: #7772df;
+    position: relative;
+    z-index: 10;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.menu > li {
+    position: relative;
+}
+
+.menu > li > a {
+    display: block;
+    padding: 16px 24px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Dropdown-menu */
+.submenu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 170px;
+    list-style: none;
+    background-color: #7772df;
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    padding: 8px 0;
+}
+
+.submenu a {
+    display: block;
+    padding: 4px 12px;
+    color: white;
+    font-size: 11px;
+    text-decoration: none;
+}
+
+/* Dropdown zichtbaar bij hover */
+.dropdown:hover .submenu {
+    display: flex;
+}
+
+/* Tekst wordt zwart bij hover */
+.menu a:hover,
+.submenu a:hover {
+    color: black;
+}
+
+/* Hero-gedeelte */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-height: 300px;
+    padding: 35px 50px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.hero-text {
+    width: 55%;
+    position: relative;
+    z-index: 1;
+}
+
+.decoration {
+    color: #8500ff;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.chat {
+    display: inline-block;
+    border: 2px solid #38e5c0;
+    color: #38e5c0;
+    border-radius: 50%;
+    padding: 8px;
+    font-size: 20px;
+    vertical-align: top;
+}
+
+.hero h3 {
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    max-width: 320px;
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 6px;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.button-outline {
+    border: 1px solid white;
+}
+
+.button-purple {
+    background-color: #8500ff;
+}
+
+.button:hover {
+    background-color: #7772df;
+}
+
+/* Rechterkant */
+.hero-image {
+    width: 40%;
+    height: 230px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle {
+    position: absolute;
+    top: -180px;
+    right: -30px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #8050ed;
+}
+
+.phone {
+    position: relative;
+    z-index: 1;
+    font-size: 110px;
+}
+
+.deal {
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: #8500ff;
+    font-size: 12px;
+    text-align: center;
+    transform: rotate(-12deg);
+}
+
+/* Mobiele weergave */
+@media (max-width: 600px) {
+    .menu {
+        flex-wrap: wrap;
+    }
+
+    .menu > li > a {
+        padding: 12px 8px;
+        font-size: 12px;
+    }
+
+    .submenu {
+        width: 160px;
+    }
+
+    .hero {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px 24px;
+    }
+
+    .hero-text,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image {
+        min-height: 180px;
+    }
+}
+
