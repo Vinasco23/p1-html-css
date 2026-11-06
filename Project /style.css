@@ -1,0 +1,332 @@
+/* ===== 1. BASIS ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #080808;
+  color: white;
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+
+/* Rode woorden in koppen */
+h1 span,
+h2 span,
+.logo span {
+  color: #ff2020;
+}
+
+h1 {
+  font-size: clamp(32px, 6vw, 70px);
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: clamp(26px, 4vw, 40px);
+  margin-bottom: 15px;
+}
+
+h3 {
+  margin-bottom: 8px;
+}
+
+p {
+  color: #aaa;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: #ff2020;
+}
+
+/* ===== 2. MENU ===== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid #3a1010;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ccc;
+}
+
+/* ===== 3. HOME (video) ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Donkere laag over de video */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.hero-content {
+  position: relative; /* zodat het boven de video staat */
+  padding: 20px;
+}
+
+.mvm-gif {
+  width: 300px;
+  max-width: 80%;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(28px, 4vw, 48px);
+  text-transform: uppercase;
+}
+
+/* ===== 4. SECTIES ===== */
+section {
+  padding: 120px 8% 80px;
+}
+
+.donker {
+  background: #0d0d0d;
+}
+
+.label {
+  color: #ff2020;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.intro {
+  margin-bottom: 40px;
+}
+
+.notitie {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #777;
+}
+
+/* Twee kolommen naast elkaar */
+.twee-kolommen {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* ===== 5. BLOKKEN (vierkantjes) ===== */
+.blok {
+  background: #121212;
+  border: 1px solid #303030;
+  padding: 25px;
+}
+
+.blok:hover {
+  border-color: #ff2020;
+}
+
+/* ===== 6. OVER MIJ ===== */
+.foto-groot {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border: 1px solid #451313;
+}
+
+.tags {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tags span {
+  padding: 8px 12px;
+  font-size: 12px;
+  border: 1px solid #401111;
+  background: #120909;
+}
+
+/* ===== 7. INTERVIEW ===== */
+.vragen {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 900px;
+}
+
+.vragen h3 {
+  color: #ff2020;
+}
+
+/* ===== 8. SKILLS (tabel) ===== */
+.tabel-box {
+  overflow-x: auto; /* tabel scrollt op een kleine telefoon */
+}
+
+table {
+  width: 100%;
+  min-width: 500px;
+  border-collapse: collapse;
+  background: #111;
+}
+
+th {
+  background: #3a0808;
+  padding: 15px;
+  text-align: left;
+}
+
+td {
+  padding: 15px;
+  border-bottom: 1px solid #292929;
+  color: #ccc;
+}
+
+/* ===== 9. PROJECTEN ===== */
+.projecten {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.projecten img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: #3a0b0b;
+  margin-bottom: 15px;
+}
+
+.projecten a {
+  display: inline-block;
+  margin-top: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* ===== 10. CONTACT ===== */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input,
+textarea {
+  padding: 12px;
+  background: #0a0a0a;
+  border: 1px solid #303030;
+  color: white;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ff2020;
+}
+
+button {
+  align-self: flex-start;
+  margin-top: 10px;
+  padding: 12px 30px;
+  background: #ff2020;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #c01010;
+}
+
+/* ===== 11. FOOTER ===== */
+footer {
+  padding: 25px;
+  text-align: center;
+  background: #050505;
+  border-top: 1px solid #252525;
+  color: #777;
+}
+
+/* ===== 12. TELEFOON EN TABLET ===== */
+@media (max-width: 800px) {
+  header {
+    flex-direction: column;
+    gap: 10px;
+    padding: 12px 5%;
+  }
+
+  nav {
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  section {
+    padding: 150px 6% 60px;
+  }
+
+  .hero {
+    padding: 0;
+  }
+
+  .twee-kolommen {
+    grid-template-columns: 1fr; /* onder elkaar */
+  }
+}
